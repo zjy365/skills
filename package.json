@@ -1,0 +1,11 @@
+{
+  "name": "@zjy365/skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal Codex skills collection.",
+  "scripts": {
+    "catalog": "node scripts/catalog-skills.mjs",
+    "validate": "python3 /Users/jingyang/.codex/skills/.system/plugin-creator/scripts/validate_plugin.py ."
+  },
+  "license": "MIT"
+}

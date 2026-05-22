@@ -1,0 +1,37 @@
+{
+  "name": "skills",
+  "version": "0.1.0",
+  "description": "Personal Codex skills collection for reusable workflows.",
+  "author": {
+    "name": "zjy365",
+    "url": "https://github.com/zjy365"
+  },
+  "homepage": "https://github.com/zjy365/skills",
+  "repository": "https://github.com/zjy365/skills",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "skills",
+    "agents",
+    "workflows"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Personal Skills",
+    "shortDescription": "Reusable personal Codex skills.",
+    "longDescription": "A curated personal collection of Codex skills for organizing, sharing, and reusing agent workflows.",
+    "developerName": "zjy365",
+    "category": "Productivity",
+    "capabilities": [
+      "Skills",
+      "Workflow"
+    ],
+    "websiteURL": "https://github.com/zjy365/skills",
+    "brandColor": "#2563EB",
+    "defaultPrompt": [
+      "Use my personal skills for this workflow.",
+      "Help me organize a new reusable skill.",
+      "Review this skill before publishing it."
+    ]
+  }
+}
