@@ -1,0 +1,4 @@
+interface:
+  display_name: "Objective Crafter"
+  short_description: "Draft auditable Codex Goals"
+  default_prompt: "Use $objective-crafter to turn this rough task into a strong /goal."

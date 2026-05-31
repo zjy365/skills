@@ -17,7 +17,7 @@ npx skills add zjy365/skills --all
 Install only one skill:
 
 ```bash
-npx skills add zjy365/skills --skill goal-crafter
+npx skills add zjy365/skills --skill objective-crafter
 ```
 
 Install globally for your user:
@@ -42,7 +42,7 @@ npx skills add zjy365/skills --list
 
 | Skill | Use When |
 | --- | --- |
-| `goal-crafter` | Turn a rough task into a strong Codex `/goal` with a measurable outcome, verification evidence, constraints, iteration policy, and blocked stop condition. |
+| `objective-crafter` | Turn a rough task into a strong Codex `/goal` with a measurable outcome, verification evidence, constraints, iteration policy, and blocked stop condition. |
 
 The generated catalog is also available in [docs/SKILLS.md](docs/SKILLS.md).
 
@@ -76,7 +76,7 @@ npx skills remove
 
 ```text
 skills/
-  goal-crafter/
+  objective-crafter/
     SKILL.md
     agents/openai.yaml
 

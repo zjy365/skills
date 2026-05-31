@@ -1,9 +1,9 @@
 ---
-name: goal-crafter
+name: objective-crafter
 description: "Turn rough work requests into strong Codex /goal objectives with measurable outcomes, verification evidence, constraints, iteration policy, and blocked stop conditions. Use when the user asks to write, refine, strengthen, or translate a task into a Goal; says things like 帮我写 goal, 制定可执行目标, 收敛成 goal, turn this into /goal, keep working until done, continue until fixed, or wants Codex to persist across multiple turns until evidence says the task is complete."
 ---
 
-# Goal Crafter
+# Objective Crafter
 
 Create a concise, auditable `/goal` command. Do not implement the task. Do not start a Goal unless the user explicitly asks you to create it in the current thread.
 
