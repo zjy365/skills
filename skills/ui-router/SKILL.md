@@ -1,84 +1,80 @@
 ---
 name: ui-router
-description: "Route UI, frontend, design-system, animation, accessibility, and visual-resource requests to the smallest useful set of publicly documented skills and resources. Use when a UI request needs a design direction, implementation path, library choice, or quality-review route before execution."
+description: "Choose and use the right UI skills for frontend design, implementation, redesign, animation, accessibility, responsive layout, and visual quality work. Use whenever a UI request could benefit from specialized design skills, especially when the user is unsure which skill to use or gives a broad request such as build, redesign, improve, polish, animate, audit, or recreate an interface."
 ---
 
 # UI Router
 
-Use this skill as a public routing layer for UI work. Its reference map is shipped with the skill and contains only public skills, repositories, libraries, and tools. Do not read personal files, home-directory paths, environment variables, credentials, or private project notes.
+Route UI work to the smallest effective set of specialized UI skills. The goal is to use the right skills in the right order, not to produce a routing report.
 
-## Public Resource Map
+Read [`references/ui-skill-catalog.md`](references/ui-skill-catalog.md) when the request needs skill selection. The catalog lists public UI skills, their purposes, and source repositories.
 
-Read [`references/ui-resource-map.md`](references/ui-resource-map.md) before making a resource recommendation. Read only the sections needed for the current request; do not copy the whole map into the response.
+## Route the Work
 
-The map is a public reference, not a guarantee that every listed tool is installed in the current environment. Verify local availability before presenting a skill as directly callable. If a candidate is not installed or is not included in the current skill package, label it as an external candidate and include its public installation or repository URL.
+1. Identify the product context and current phase:
+   - new UI: establish direction, then implement;
+   - existing UI: critique before changing broad visual behavior;
+   - defined problem: route directly to the narrow repair skill;
+   - completed implementation: audit, then polish.
+2. Choose one primary skill that owns the main decision or implementation.
+3. Add supporting skills only when they have separate jobs. Two or three skills are normally enough.
+4. Keep one visual direction. Do not combine Apple, minimalist, brutalist, high-end, and other competing taste skills unless the user asks to compare directions.
+5. If the user asks for implementation, invoke the primary skill and proceed. Apply supporting skills in sequence when their phase arrives.
+6. If the user only asks which skill to use, answer with the primary skill, optional supporting skills, and one short reason.
 
-## Routing Workflow
+## Default Routes
 
-1. Identify the work mode before choosing a route:
-   - operate: desktop workbench, dashboard, table, settings, resource view, or high-frequency product UI
-   - persuade: landing page, brand site, launch page, portfolio, or visual storytelling
-   - prototype: compare materially different information architectures or visual directions
-   - restore: screenshot-driven reconstruction or an existing UI redesign
-   - motion: animation design, implementation, review, or performance
-   - quality: accessibility, metadata, responsive behavior, performance, or final polish
-   - resource: choose a component library, charting library, icon source, image tool, or design reference
-2. Read the matching section in the public map. Use repository and author information when provenance or family compatibility matters; use the usage section when selecting by task.
-3. Choose one primary route. Add at most two or three supporting routes when each has a distinct responsibility.
-4. Keep visual direction singular. Do not combine competing taste systems such as Apple, brutalist, minimalist, high-end agency, or multiple generic taste systems unless the user explicitly asks for a comparison.
-5. Separate judgment from implementation:
-   - choose the product direction and constraints first;
-   - choose the implementation skill or library second;
-   - audit and polish after the implementation is concrete.
-6. Check whether each selected skill is available in the current environment. Only available skills may appear as directly callable `Primary` or `Supporting` routes. Unavailable options must be listed as external candidates with a public source.
-7. State the route before invoking or recommending skills.
+Start with the first skill, then add the next skill only when that phase is needed. Keep a route to three skills or fewer.
 
-## Public Route Defaults
+| UI task | Route |
+| --- | --- |
+| Build a production UI from requirements | `design` → `audit` → `polish` |
+| macOS or Apple-platform product | `apple-design` → `design` → `audit` |
+| SaaS, dashboard, or operational tool | `design-taste-frontend` → `design` → `audit` |
+| Landing page, launch page, or portfolio | `high-end-visual-design` → `design` → `polish` |
+| Minimal or content-first interface | `minimalist-ui` → `design` → `polish` |
+| Industrial or brutalist direction | `industrial-brutalist-ui` → `design` → `audit` |
+| Redesign an existing product | `critique` → `redesign-existing-projects` → `audit` |
+| Existing UI feels rough or inconsistent | `baseline-ui` → the specific repair skill → `polish` |
+| Establish or recover a design system | `create-design-md` → `design` → `audit` |
+| Build a brand system and product UI together | `brandkit` → `create-design-md` → `design` |
+| Compare multiple UI directions | `prototype` → the chosen direction skill → `design` |
+| Recreate a screenshot or design image | `image-to-code` → `layout` → `polish` |
+| Choose a component library | `pick-ui-library` → `create-design-md` |
+| Fix layout or responsive behavior | `layout` → `adapt` |
+| Fix typography and information hierarchy | `typeset` → `polish` |
+| Improve accessibility | `fixing-accessibility` → `audit` |
+| Review overall UI quality | `audit` → the specific repair skill → `polish` |
+| Decide where animation helps | `find-animation-opportunities` → `emil-design-eng` → an implementation skill |
+| Implement simple interaction motion | `css-animations` or `waapi` → `review-animations` |
+| Implement complex timelines or scroll stories | `gsap` → `review-animations` → `fixing-motion-performance` |
+| Improve existing animation | `improve-animations` → `review-animations` → `fixing-motion-performance` |
 
-These defaults use skills that are shipped in this repository. Verify availability at runtime because a user may install only part of the package:
+## Selection Rules
 
-| Request | Primary | Supporting |
-| --- | --- | --- |
-| Mac disk or cleanup workflow | `mole` | none |
-| Turn a rough request into an executable objective | `objective-crafter` | none |
-| Unclear UI request | `ui-router` | one available task-specific skill |
+- Use a direction skill before a broad implementation skill when visual direction is undecided.
+- Use `critique` before a broad redesign, but skip it for a narrow, already diagnosed defect.
+- Use `audit` to find and verify problems. Use `polish` only after structural, accessibility, responsive, and performance issues are addressed.
+- Use `layout`, `typeset`, `adapt`, `colorize`, `quieter`, `bolder`, `distill`, or `clarify` for a specific visible weakness instead of restarting the design.
+- Use `emil-design-eng` for motion judgment; use `css-animations`, `waapi`, `animejs`, or `gsap` for implementation according to complexity.
+- If the ideal skill is unavailable, recommend it with its public repository from the catalog. Use an installed substitute only when it performs the same UI job without changing the intended direction.
+- Never route to an unrelated skill merely because it ships in the same repository. Do not install external skills unless the user asks or installation is already authorized.
 
-For UI-specific work, use the public map to select an external candidate by category, then report it as an external dependency unless the same skill is available locally. Do not invent a local fallback and do not present a missing skill as installed.
+## Response Behavior
 
-## Resource Selection Rules
-
-- Treat external resources as references or implementation aids, not as the product's design system.
-- Prefer public source ownership, maintenance status, accessibility, licensing, package weight, and framework fit over attractive screenshots.
-- For React product UI, distinguish source-distribution systems such as shadcn/ui from third-party collections and generated examples.
-- For charting, editors, grids, icons, and image tools, select by the actual interaction requirement and data scale; do not add a large specialist dependency for a static display.
-- Preserve the target project's existing design tokens, security boundaries, information density, and interaction model when those constraints already exist.
-- Do not claim benchmarks, customer outcomes, installation state, or maintenance status unless the public map or the user's project provides evidence.
-
-## Output Contract
-
-For a routing request, answer in this shape:
+For implementation requests, keep routing brief and start the work:
 
 ```markdown
-**Route**
-- Mode: <operate | persuade | prototype | restore | motion | quality | resource>
-- Primary: `<available skill>` or external candidate
-- Supporting: `<available skill>`, `<available skill>`
-
-**Why**
-<one or two sentences tied to the user's actual context>
-
-**Read from the map**
-- <relevant public section, author, repository, or resource>
-
-**Availability**
-- <available locally, or public installation/source URL for each external candidate>
-
-**Boundary**
-<what not to load, combine, or introduce yet>
+Using `critique` first to identify the redesign problems, then `redesign-existing-projects` to implement the chosen direction.
 ```
 
-If the request is already precise and implementation-ready, route briefly and proceed with the requested implementation. Do not turn a clear code edit into a design workshop.
+For skill-selection questions, answer concisely:
 
-## Maintenance
+```markdown
+Primary: `apple-design`
+Supporting: `layout`, `typeset`, `audit`
 
-Keep the reference map limited to public information that can be distributed with this skill. When a public resource changes, update the reference map and this skill's defaults together. Never add personal paths, credentials, cookies, local installation records, or private project facts.
+This is an Apple-platform workbench, so interaction behavior and native structure should be decided before layout and final quality checks.
+```
+
+Do not expose internal routing categories, availability bookkeeping, or catalog-reading steps unless the user asks for them.
