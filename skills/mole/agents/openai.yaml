@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mole for macOS"
+  short_description: "Safely inspect and clean a Mac with Mole"
+  default_prompt: "Use $mole on macOS to inspect this Mac and preview safe cleanup options. Do not delete anything until I review and explicitly confirm the exact plan."

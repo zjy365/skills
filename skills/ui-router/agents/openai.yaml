@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Router"
+  short_description: "Route UI work through a public resource map"
+  default_prompt: "Use $ui-router and its bundled public resource map to choose the smallest useful UI skill or external resource for this request."
