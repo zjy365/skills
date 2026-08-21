@@ -44,7 +44,7 @@ npx skills add zjy365/skills --list
 | --- | --- |
 | `mole` | Safely analyze Mac disk usage and operate Mole cleanup, uninstall, purge, installer, optimization, status, and history workflows with preview-first confirmation. |
 | `objective-crafter` | Turn a rough task into a strong Codex `/goal` with a measurable outcome, verification evidence, constraints, iteration policy, and blocked stop condition. |
-| `ui-router` | Route UI work through a bundled public resource map and choose the smallest useful local skill or external resource. |
+| `ui-router` | Choose and use the right UI skills for design, implementation, redesign, motion, accessibility, and quality work. |
 
 The generated catalog is also available in [docs/SKILLS.md](docs/SKILLS.md).
 
@@ -87,7 +87,7 @@ skills/
     agents/openai.yaml
   ui-router/
     SKILL.md
-    references/ui-resource-map.md
+    references/ui-skill-catalog.md
     agents/openai.yaml
 
 .codex-plugin/plugin.json
