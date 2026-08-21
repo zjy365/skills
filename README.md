@@ -1,65 +1,51 @@
 # zjy365 Skills
 
-[![skills.sh](https://skills.sh/b/zjy365/skills)](https://skills.sh/zjy365/skills)
+Reusable agent skills for Codex and other tools supported by [skills.sh](https://skills.sh/).
 
-Reusable agent skills for Codex and other tools supported by [skills.sh](https://www.skills.sh/).
+[中文说明](README.zh-CN.md)
 
-This repository is meant to be installed directly with `npx skills`. You do not need to clone it.
+## What You Can Do
+
+| Skill | Use it for |
+| --- | --- |
+| `ui-router` | Choose the right UI skills for design, implementation, redesign, motion, accessibility, and visual quality work. |
+| `mole` | Analyze disk usage, check system status, clean caches, uninstall apps, and free space on macOS. Destructive actions are previewed and require confirmation. |
+| `objective-crafter` | Turn a rough idea into an executable Codex `/goal` with a measurable outcome, verification steps, constraints, and stop conditions. It writes the Goal but does not execute it. |
 
 ## Install
 
-Install all skills into the current project:
-
 ```bash
-npx skills add zjy365/skills --all
+npx skills add zjy365/skills
 ```
 
-Install only one skill:
+## Use
 
-```bash
-npx skills add zjy365/skills --skill objective-crafter
+After installation, describe your task naturally or mention a skill explicitly.
+
+Choose the right UI skills:
+
+```text
+Use $ui-router to decide which UI skills should come first when redesigning this SaaS dashboard.
 ```
 
-Install globally for your user:
+Safely inspect and clean a Mac:
 
-```bash
-npx skills add zjy365/skills --global --all
+```text
+Use $mole to check what can be safely cleaned on my Mac. Show me a preview and do not delete anything yet.
 ```
 
-Install for Codex explicitly:
+Create an executable objective:
 
-```bash
-npx skills add zjy365/skills --agent codex --all
+```text
+Use $objective-crafter to turn "make this project faster" into a verifiable /goal.
 ```
-
-Preview available skills without installing:
-
-```bash
-npx skills add zjy365/skills --list
-```
-
-## Available Skills
-
-| Skill | Use When |
-| --- | --- |
-| `mole` | Safely analyze Mac disk usage and operate Mole cleanup, uninstall, purge, installer, optimization, status, and history workflows with preview-first confirmation. |
-| `objective-crafter` | Turn a rough task into a strong Codex `/goal` with a measurable outcome, verification evidence, constraints, iteration policy, and blocked stop condition. |
-| `ui-router` | Choose and use the right UI skills for design, implementation, redesign, motion, accessibility, and quality work. |
-
-The generated catalog is also available in [docs/SKILLS.md](docs/SKILLS.md).
 
 ## Common Commands
 
-List installed project skills:
+List installed skills:
 
 ```bash
 npx skills list
-```
-
-List global skills:
-
-```bash
-npx skills list --global
 ```
 
 Update installed skills:
@@ -74,47 +60,6 @@ Remove installed skills:
 npx skills remove
 ```
 
-## Repository Structure
+## Safety
 
-```text
-skills/
-  mole/
-    SKILL.md
-    references/SAFETY.md
-    agents/openai.yaml
-  objective-crafter/
-    SKILL.md
-    agents/openai.yaml
-  ui-router/
-    SKILL.md
-    references/ui-skill-catalog.md
-    agents/openai.yaml
-
-.codex-plugin/plugin.json
-docs/SKILLS.md
-scripts/catalog-skills.mjs
-```
-
-Each skill lives in `skills/<skill-name>/` and must include a `SKILL.md` file with `name` and `description` frontmatter.
-
-## Maintainers
-
-Add or update a skill under `skills/<skill-name>/`, then refresh the catalog:
-
-```bash
-npm run catalog
-```
-
-Validate before publishing changes:
-
-```bash
-npm run validate
-```
-
-Check the public install surface:
-
-```bash
-npx skills add zjy365/skills --list
-```
-
-Do not commit secrets, credentials, cookies, or machine-specific private paths. Everything in this repository should be safe for public installation.
+`mole` supports macOS only. For cleanup, uninstall, or system changes, it creates a preview first and waits for explicit confirmation of the exact plan. A cleanup approval does not automatically authorize permanent deletion or other high-risk operations.
