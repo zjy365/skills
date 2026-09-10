@@ -10,6 +10,7 @@ Reusable agent skills for Codex and other tools supported by [skills.sh](https:/
 | --- | --- |
 | `ui-router` | Choose the right UI skills for design, implementation, redesign, motion, accessibility, and visual quality work. |
 | `mole` | Analyze disk usage, check system status, clean caches, uninstall apps, and free space on macOS. Destructive actions are previewed and require confirmation. |
+| `media-tools` | Compress, convert, resize, and prepare local images and videos for X/Twitter, Instagram, WhatsApp, email, or the web without uploading the media. |
 | `objective-crafter` | Turn a rough idea into an executable Codex `/goal` with a measurable outcome, verification steps, constraints, and stop conditions. It writes the Goal but does not execute it. |
 
 ## Install
@@ -32,6 +33,12 @@ Safely inspect and clean a Mac:
 
 ```text
 Use $mole to check what can be safely cleaned on my Mac. Show me a preview and do not delete anything yet.
+```
+
+Prepare a local video for X/Twitter:
+
+```text
+Use $media-tools to process ./demo.mov for X/Twitter.
 ```
 
 Create an executable objective:
